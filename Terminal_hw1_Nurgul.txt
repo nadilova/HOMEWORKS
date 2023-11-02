@@ -1,0 +1,68 @@
+1) Посмотреть, где я:			pwd
+
+2) Создать папку:			mkdir qa_practice
+
+3) Зайти в папку:			cd qa_practice
+
+4) Создать три папки:			mkdir testing python gbash
+
+5) Зайти в любую папку:			cd gbash
+
+6) Создать пять файлов:			touch disciplines.txt timetable.txt teachers.txt books.json staff.json
+
+7) Создать три папки:			mkdir homework_video python_video testing_video
+
+8) Вывести списко содержимого папки:	ls -la
+
+9) Открыть любой текстовый файл:	cat  teachers.txt
+
+10) Написать туда что-нибудь:		cat > teachers.txt || cat >> teachers.txt || vim teachers.txt, i
+
+11) Сохранить и выйти:			ctrl + C	   || ctrl + C		  || esc :wq
+
+12) Выйти из папки на уровень выше:	cd ..
+
+13) Переместить любые два созданных 
+файла в другую папку: 			mv t*.txt testing
+
+14) Скопировать любые два 
+созданных файлы в другую папку: 	cp *.json python
+  
+15) Найти файл по имени:		find -name teachers.txt
+
+16) Посмотреть содержимое в реальном времени (команда grep), изучить как она работает: cd testing
+										       tail -f teachers.txt
+
+17) Вывести несколько первых строк из текстового файла: 	head -n 3 teachers.txt 
+
+18) Вывести несколько последних строк из текстового файла:	tail -n 3 teachers.txt
+
+19) Посмотреть содержимое длинного файла: history > history.txt,
+					  less history.txt
+
+20) Вывести дату и время:		  date
+
+
+
+Задание *
+1) Отправить http-запрос на сервер:
+curl http://162.55.220.72:5006/terminal-hw-request
+curl  "http://162.55.220.72:5005/get_method?name=(Nurgul)&age=(XX)"
+
+2) Написать скрипт, который выполнит автоматически пункты 3,4,5,6,7,8,13:
+cat > myscript.sh
+=================l
+mkdir result
+cd result
+mkdir f1 f2 f3
+cd f1
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir f1_1 f1_2 f1_3
+ls -la
+mv file1.txt ../f2/file1.txt
+mv file2.txt ../f2/file2.txt
+==================
+chmod +x myscript.sh
+./myscript.sh
+
+
