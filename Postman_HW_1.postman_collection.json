@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "728ec1ff-3686-4d88-807f-50e62a708216",
+		"name": "Postman_HW_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29438361"
+	},
+	"item": [
+		{
+			"name": "get_method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server1}}/get_method?name={{nameReq1}}&age={{age1}}",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"ageReq = \r",
+							"\r",
+							"pm.test(\"Check response age\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.age).to.eql(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server1}}/object_info_1?name={{nameReq1}}&age={{age1}}&weight=82",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}"
+						},
+						{
+							"key": "weight",
+							"value": "82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server1}}/object_info_2?name={{nameReq1}}&age={{age1}}&salary={{salary1}}",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server1}}/object_info_3?name={{nameReq1}}&age={{age1}}&salary={{salary1}}",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server1}}/object_info_4?name={{nameReq1}}&age={{age1}}&salary={{salary1}}",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary1}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server1}}/user_info_3",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"salaryFirstRise\", jsonData.qa_salary_after_6_months);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{nameReq1}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age1}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary1}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server1}}/user_info_2",
+					"host": [
+						"{{server1}}"
+					],
+					"path": [
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "salary_first_rise",
+			"value": ""
+		},
+		{
+			"key": "first_salary_rise",
+			"value": ""
+		}
+	]
+}
